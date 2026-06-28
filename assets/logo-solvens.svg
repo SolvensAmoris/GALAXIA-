@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+
+  <defs>
+
+    <radialGradient id="gold" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#fff4b0"/>
+      <stop offset="40%" stop-color="#ffd86b"/>
+      <stop offset="70%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#8a6912"/>
+    </radialGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+  </defs>
+
+  <!-- Círculo exterior -->
+
+  <circle
+      cx="256"
+      cy="256"
+      r="200"
+      fill="none"
+      stroke="url(#gold)"
+      stroke-width="8"
+      filter="url(#glow)"/>
+
+  <!-- Círculo interior -->
+
+  <circle
+      cx="256"
+      cy="256"
+      r="165"
+      fill="none"
+      stroke="#d4af37"
+      stroke-width="2"
+      opacity=".55"/>
+
+  <!-- Estrella -->
+
+  <polygon
+      points="
+      256,110
+      286,215
+      395,215
+      306,280
+      340,390
+      256,325
+      172,390
+      206,280
+      117,215
+      226,215"
+      fill="none"
+      stroke="url(#gold)"
+     
